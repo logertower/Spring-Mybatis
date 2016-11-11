@@ -2,8 +2,9 @@ package com.liutf.mvc.dao.mysql;
 
 import com.liutf.mvc.entity.mysql.Test;
 import com.liutf.mvc.entity.mysql.TestExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TestMapper {
     int countByExample(TestExample example);
@@ -19,4 +20,6 @@ public interface TestMapper {
     int updateByExampleSelective(@Param("record") Test record, @Param("example") TestExample example);
 
     int updateByExample(@Param("record") Test record, @Param("example") TestExample example);
+
+    List<Test> likeTest(String t1);
 }

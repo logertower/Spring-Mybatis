@@ -47,5 +47,12 @@ public class TestController extends BaseController {
         return new JsonResult(1, testList);
     }
 
+    @RequestMapping("/getLikeTest.do")
+    @ResponseBody
+    public JsonResult getLikeTest() {
+        List<Test> likeTest = testService.getLikeTest();
+        return new JsonResult(1, likeTest);
+    }
+
 
 }

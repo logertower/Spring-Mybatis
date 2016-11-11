@@ -115,6 +115,9 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+  <select id="likeTest" resultType="com.liutf.mvc.entity.mysql.Test" parameterType="string">
+    SELECT t1,t2 FROM test WHERE t1 LIKE #{pattern}
+  </select>
   <update id="updateByExampleSelective" parameterType="map" >
     update test
     <set >

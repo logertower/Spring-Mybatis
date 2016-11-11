@@ -26,4 +26,10 @@ public class TestService {
         return tests;
     }
 
+    public List<Test> getLikeTest(){
+        String t1 = "%11%";
+        List<Test> testList = testMapper.likeTest(t1);
+        return testList;
+    }
+
 }
